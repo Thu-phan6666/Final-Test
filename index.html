@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Test</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <div id="winMessage" class="win-message hidden">YOU WIN!</div>
+
+    <div class="center">
+      <button class="button start" id="toggleButton">Bắt đầu</button>
+    </div>
+    <div class="container">
+      <div class="grid-container" id="grid">
+        <div class="box bg-green-100 text-green-500">1</div>
+        <div class="box bg-red-100 text-red-500">2</div>
+        <div class="box bg-blue-100 text-blue-500">3</div>
+        <div class="box bg-purple-100 text-purple-500">4</div>
+        <div class="box bg-pink-100 text-pink-500">5</div>
+        <div class="box bg-yellow-100 text-yellow-500">6</div>
+        <div class="box bg-indigo-100 text-indigo-500">7</div>
+        <div class="box bg-gray-100 text-gray-500">8</div>
+        <div class="box bg-emerald-100 text-emerald-500">9</div>
+        <div class="box bg-amber-100 text-amber-500">10</div>
+        <div class="box bg-lime-100 text-lime-500">11</div>
+        <div class="box black-box">12</div>
+      </div>
+      <div class="right-column">
+        <div class="bg-green-100 clock">
+          <h2>Đồng Hồ</h2>
+          <h1 id="timer">00:00</h1>
+        </div>
+        <div class="bg-gray-100 turtorial">
+          <h2>Hướng Dẫn Di Chuyển</h2>
+          <div class="keyboard">
+            <div class="key-row">
+              <div class="key">W</div>
+            </div>
+            <div class="key-row">
+              <div class="key">A</div>
+              <div class="key">S</div>
+              <div class="key">D</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history-wrapper">
+      <div class="matchHistory">
+        <h1>Lịch Sử Lượt Chơi</h1>
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Bước đi</th>
+              <th>Thời Gian</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
