@@ -4,14 +4,12 @@ let dong_ho = null;
 let di_chuyen = 0;
 let stt = 1;
 
-// Cập nhật đồng hồ
 function cap_nhat_ThoiGian() {
     let phut = Math.floor(so_giay / 60).toString().padStart(2, '0');
     let giay = (so_giay % 60).toString().padStart(2, '0');
     document.getElementById('time').textContent = `${phut}:${giay}`;
 }
 
-// Bắt đầu đếm giờ
 function bat_dau_Dem() {
     clearInterval(dong_ho);
     so_giay = 0;
@@ -22,12 +20,10 @@ function bat_dau_Dem() {
     }, 1000);
 }
 
-// Dừng đồng hồ
 function dung_dong_ho() {
     clearInterval(dong_ho);
 }
 
-// Nút bắt đầu / kết thúc
 document.querySelector('.start-button').addEventListener('click', function () {
     const winText = document.getElementById('win-message');
     winText.classList.add('hidden');
@@ -49,7 +45,6 @@ document.querySelector('.start-button').addEventListener('click', function () {
     }
 });
 
-// Trộn ô
 function tronO(solan) {
     const phim = ['w', 'a', 's', 'd'];
     for (let i = 0; i < solan; i++) {
@@ -58,7 +53,6 @@ function tronO(solan) {
     }
 }
 
-// Sự kiện phím
 document.addEventListener('keydown', function (e) {
     if (!dang_choi) return;
     const phim = e.key.toLowerCase();
@@ -78,7 +72,6 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// Di chuyển ô đen
 function di_chuyen_Oden(huong) {
     const board = document.getElementById('board');
     const cells = Array.from(board.children);
@@ -107,7 +100,6 @@ function di_chuyen_Oden(huong) {
     }
 }
 
-// Kiểm tra thắng
 function kiem_tra_Thang() {
     const cells = document.querySelectorAll('#board .cell');
     let dung_thu_tu = true;
@@ -128,7 +120,6 @@ function kiem_tra_Thang() {
     }
 }
 
-// Lưu lịch sử lượt chơi
 function luu_lich_su() {
     const tbody = document.getElementById('history');
     const hang = document.createElement('tr');
